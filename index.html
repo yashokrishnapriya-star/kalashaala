@@ -1,10 +1,466 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Kalashaala</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalashaala | Dance & Arts Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.6;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#7c3aed;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#7c3aed;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(
+        rgba(15,23,42,.75),
+        rgba(15,23,42,.75)
+    ),
+    url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80');
+    height:90vh;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    color:white;
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#f59e0b;
+    color:white;
+    padding:14px 30px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#d97706;
+}
+
+/* STATS */
+
+.stats{
+    padding:70px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+    color:#7c3aed;
+    font-size:2rem;
+}
+
+.stat-card p{
+    color:#64748b;
+}
+
+/* DANCE FORMS */
+
+.section-title{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:2.5rem;
+    color:#0f172a;
+}
+
+.section-sub{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#7c3aed;
+}
+
+/* EVENTS */
+
+.events{
+    padding:80px 0;
+}
+
+.event{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.date{
+    background:#7c3aed;
+    color:white;
+    padding:10px 20px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:80px 0;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    height:250px;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item img:hover{
+    transform:scale(1.08);
+}
+
+/* CONTACT */
+
+.contact{
+    padding:80px 0;
+}
+
+.contact-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.event{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    display:none;
+}
+}
+
+</style>
 </head>
+
 <body>
-<h1>🎭 Kalashaala</h1>
-<p>Website is working successfully.</p>
+
+<nav>
+<div class="container nav-container">
+<div class="logo">🎭 Kalashaala</div>
+
+<div class="nav-links">
+<a hrefa>
+<a href="#dance">Dance Forms</aents</a>
+<a href="#gallery">
+#contactContact</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container hero-content">
+<h1>Celebrating Dance, Art & Culture</h1>
+
+<p>
+A vibrant platform connecting artists, students and cultural enthusiasts.
+Join workshops, performances and learning programs from renowned experts.
+</p>
+
+<a href="#events" class="btn">v>
+</section>
+
+<section class="stats">
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>250+</h2>
+<p>Students</p>
+</div>
+
+<div class="stat-card">
+<h2>30+</h2>
+<p>Artists</p>
+</div>
+
+<div class="stat-card">
+<h2>50+</h2>
+<p>Events</p>
+</div>
+
+<div class="stat-card">
+<h2>15+</h2>
+<p>Dance Forms</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="dance" class="container">
+
+<h2 class="section-title">Featured Dance Forms</h2>
+
+<p class="section-sub">
+Explore India's rich cultural heritage through classical and contemporary art forms.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Bharatanatyam</h3>
+<p>Graceful classical dance form from Tamil Nadu known for expressions and storytelling.</p>
+</div>
+
+<div class="card">
+<h3>Kuchipudi</h3>
+<p>Elegant dance-drama tradition originating from Andhra Pradesh.</p>
+</div>
+
+<div class="card">
+<h3>Kathak</h3>
+<p>North Indian classical dance recognized for spins and rhythmic footwork.</p>
+</div>
+
+<div class="card">
+<h3>Contemporary</h3>
+<p>Modern artistic expression blending innovation and creativity.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="events" class="events">
+<div class="container">
+
+<h2 class="section-title">Upcoming Events</h2>
+
+<div class="event">
+<div>
+<h3>Bharatanatyam Workshop</h3>
+<p>Bengaluru Cultural Centre</p>
+</div>
+<div class="date">25 Sep</div>
+</div>
+
+<div class="event">
+<div>
+<h3>Classical Dance Festival</h3>
+<p>National Performing Arts Auditorium</p>
+</div>
+<div class="date">10 Oct</div>
+</div>
+
+<div class="event">
+<div>
+<h3>Young Talent Showcase</h3>
+<p>Kalashaala Campus</p>
+</div>
+<div class="date">02 Nov</div>
+</div>
+
+</div>
+</section>
+
+<section id="gallery" class="gallery">
+<div class="container">
+
+<h2 class="section-title">Gallery</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=800&q
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto==crop&w=800&q=80
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="container">
+
+<div class="contact-box">
+
+<h2 class="section-title">Connect With Us</h2>
+
+<p>
+📍 Bengaluru, India
+</p>
+
+<br>
+
+<p>
+📧 info@kalashaala.org
+</p>
+
+<br>
+
+<p>
+📞 +91 98765 43210
+</p>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Kalashaala. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
+``
