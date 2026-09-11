@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,10 +6,10 @@
 
 <title>Kalashaala | Dance & Arts Academy</title>
 
-https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
+<!-- Import Mukta font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
   --primary:#6d28d9;
   --secondary:#f59e0b;
@@ -25,7 +25,7 @@ https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&displa
 }
 
 body{
-  font-family:'Poppins',sans-serif;
+  font-family:'Mukta',sans-serif; /* Changed from Poppins to Mukta */
   color:var(--text);
   background:#fff;
   line-height:1.6;
@@ -41,317 +41,20 @@ html{
   margin:auto;
 }
 
-/* Navbar */
-
-nav{
-  position:fixed;
-  width:100%;
-  top:0;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-  box-shadow:0 2px 15px rgba(0,0,0,0.08);
+/* Dashboard-specific headings */
+.dashboard-title {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-align: center;
 }
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
+.dashboard-subtitle {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #e0e0e0;
 }
-
-.logo{
-  font-size:28px;
-  font-weight:700;
-  color:var(--primary);
-}
-
-.nav-links{
-  display:flex;
-  gap:30px;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:var(--dark);
-  font-weight:500;
-}
-
-.nav-links a:hover{
-  color:var(--primary);
-}
-
-/* Hero */
-
-.hero{
-  height:100vh;
-  background:
-    linear-gradient(rgba(15,23,42,.65),rgba(15,23,42,.65)),
-    url("https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80");
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  align-items:center;
-  text-align:center;
-  color:white;
-}
-
-.hero-content{
-  width:100%;
-}
-
-.hero h1{
-  font-size:4rem;
-  margin-bottom:20px;
-}
-
-.hero p{
-  max-width:800px;
-  margin:auto;
-  font-size:1.2rem;
-}
-
-.hero-buttons{
-  margin-top:30px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  margin:10px;
-  transition:.3s;
-}
-
-.btn-primary{
-  background:var(--secondary);
-  color:white;
-}
-
-.btn-secondary{
-  border:2px solid #fff;
-  color:white;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-/* Stats */
-
-.stats{
-  padding:80px 0;
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.stat-card{
-  background:white;
-  padding:30px;
-  text-align:center;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.stat-card h2{
-  color:var(--primary);
-  font-size:2.5rem;
-}
-
-/* Section */
-
-.section{
-  padding:90px 0;
-}
-
-.section-title{
-  text-align:center;
-  font-size:2.8rem;
-  color:var(--dark);
-  margin-bottom:15px;
-}
-
-.section-sub{
-  text-align:center;
-  color:#64748b;
-  margin-bottom:50px;
-}
-
-/* Programs */
-
-.programs{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.program{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.program img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.program-content{
-  padding:25px;
-}
-
-.program h3{
-  color:var(--primary);
-  margin-bottom:10px;
-}
-
-/* Events */
-
-.event-card{
-  background:#fff;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-  margin-bottom:20px;
-}
-
-.event-date{
-  color:var(--secondary);
-  font-weight:700;
-}
-
-/* Testimonials */
-
-.testimonials{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
-
-.testimonial{
-  background:white;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.stars{
-  color:#f59e0b;
-  font-size:22px;
-  margin-bottom:10px;
-}
-
-/* Contact */
-
-.contact{
-  background:#f8fafc;
-}
-
-.contact-box{
-  text-align:center;
-  max-width:700px;
-  margin:auto;
-}
-
-.contact-box p{
-  margin:10px 0;
-}
-
-/* Footer */
-
-footer{
-  background:var(--dark);
-  color:white;
-  text-align:center;
-  padding:30px;
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.hero h1{
-  font-size:2.6rem;
-}
-
-.nav-links{
-  display:none;
-}
-
-}
-
 </style>
 </head>
-
-<body>
-
-<nav>
-<div class="container navbar">
-<div class="logo">🎭 Kalashaala</div>
-
-<div class="nav-links">
-#aboutAbout</a>
-<a href="#programs">Programs</a>
-ts</a>
-<a href="#testeviews</a>
-<a href="#contact">Contact<//div>
-</nav>
-
-<section class="hero">
-<div class="container hero-content">
-
-<p style="color: white;">where tradition meets exelence</p>
-
-<p>
-Empowering students through classical dance, performing arts,
-cultural education and creative expression.
-</p>
-
-<div class="hero-buttons">
-#programsExplore Programs</a>
-<a href="#contact"</a>
-</div>
-
-</div>
-</section>
-
-<section class="stats">
-<div class="container">
-
-<div class="stats-grid">
-<div class="stat-card">
-<h2>500+</h2>
-<p>Students</p>
-</div>
-
-<div class="stat-card">
-<h2>15+</h2>
-<p>Dance Forms</p>
-</div>
-
-<div class="stat-card">
-<h2>50+</h2>
-<p>Events Hosted</p>
-</div>
-
-<div class="stat-card">
-<h2>25+</h2>
-<p>Expert Mentors</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="programs">
-<div class="container">
-
-<h2 class="section-title">Our Programs</h2>
